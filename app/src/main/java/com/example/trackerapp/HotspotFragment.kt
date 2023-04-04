@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class HotSpotFragment : Fragment(){
+class HotspotFragment : Fragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.hotspot_layout, container, false)
+        return inflater.inflate(R.layout.hot_spot_layout, container, false)
     }
 }
