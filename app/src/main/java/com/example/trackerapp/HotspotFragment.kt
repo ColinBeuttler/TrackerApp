@@ -1,5 +1,6 @@
 package com.example.trackerapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,5 +19,17 @@ class HotspotFragment : Fragment(){
     ): View {
         binding = HotSpotLayoutBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpOnClickListener()
+    }
+
+    private fun setUpOnClickListener() {
+        binding.newPostAddButton.setOnClickListener {
+            val intent = Intent(context, AddNewPostActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
