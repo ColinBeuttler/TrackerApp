@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar, menu)
+        return true
     }
 
     private fun onPhotosClicked(): Boolean {
