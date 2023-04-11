@@ -2,6 +2,7 @@ package com.example.trackerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.commit
 import com.example.trackerapp.databinding.ActivityMainBinding
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
         binding.bottomNav.setOnItemSelectedListener(this)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
     }
 
     private fun onPhotosClicked(): Boolean {
