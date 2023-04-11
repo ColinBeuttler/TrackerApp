@@ -50,7 +50,6 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
             else -> false
         }
 
-
     }
 
 
