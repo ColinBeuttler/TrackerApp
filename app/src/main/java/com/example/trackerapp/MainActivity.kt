@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.commit
 import com.example.trackerapp.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationBarView
@@ -19,6 +21,10 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         setContentView(binding.root)
 
         binding.bottomNav.setOnItemSelectedListener(this)
+
+        onBackPressedDispatcher.addCallback(this) {
+            Toast.makeText(this@MainActivity, "Saved on Back Press", Toast.LENGTH_LONG).show()
+        }
 
     }
 
