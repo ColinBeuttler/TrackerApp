@@ -1,5 +1,7 @@
 package com.example.trackerapp
 
+import android.content.DialogInterface
+import android.content.DialogInterface.OnClickListener
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -27,10 +29,12 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     }
 
-    private fun showDialog(){
+    private fun showDialog() {
         AlertDialog.Builder(this)
             .setTitle("Warning!!")
             .setMessage("All unsaved data will be deleted, continue?")
+            .setPositiveButton("Confirm") { _, _ -> finish() }
+            .setNegativeButton("Back") { dialog, _ -> dialog.dismiss()}
             .show()
     }
 
