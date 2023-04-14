@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.addCallback
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.commit
 import com.example.trackerapp.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationBarView
@@ -22,10 +23,15 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
         binding.bottomNav.setOnItemSelectedListener(this)
 
-        onBackPressedDispatcher.addCallback(this) {
-            Toast.makeText(this@MainActivity, "Saved on Back Press", Toast.LENGTH_LONG).show()
-        }
+        onBackPressedDispatcher.addCallback(this) { showDialog() }
 
+    }
+
+    private fun showDialog(){
+        AlertDialog.Builder(this)
+            .setTitle("Warning!!")
+            .setMessage("All unsaved data will be deleted, continue?")
+            .show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
