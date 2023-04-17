@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/night_sky_tommes_frites"
     android:foreground="@drawable/gradient_overlay"
     android:scaleType="centerCrop">
@@ -87,16 +87,6 @@
                 android:textSize="20sp" />
 
         </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/new_post_add_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Add New Post"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="InvalidId" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
