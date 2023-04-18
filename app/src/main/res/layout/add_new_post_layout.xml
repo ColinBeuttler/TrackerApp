@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/cartoon_alien"
-    android:foreground="@drawable/gradient_overlay"
     android:scaleType="centerCrop">
 
     <androidx.constraintlayout.widget.ConstraintLayout
