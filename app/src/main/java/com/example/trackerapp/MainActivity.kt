@@ -10,7 +10,9 @@ import androidx.fragment.app.commit
 import com.example.trackerapp.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationBarView
 
+
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
+
 
     private lateinit var binding: ActivityMainBinding
 
