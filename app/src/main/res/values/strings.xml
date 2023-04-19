@@ -12,4 +12,12 @@
     <string name="location">Location:</string>
     <string name="date">Date:</string>
     <string name="description">Description:</string>
+    <string-array name="ufo_shape">
+        <item>Saucer</item>
+        <item>Cigar/Tic-Tac</item>
+        <item>Sphere</item>
+        <item>Cube</item>
+        <item>Diamond/Pyramid</item>
+        <item>Other</item>
+    </string-array>
 </resources>

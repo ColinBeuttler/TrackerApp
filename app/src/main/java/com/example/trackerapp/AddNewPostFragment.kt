@@ -8,10 +8,9 @@ import androidx.fragment.app.Fragment
 import com.example.trackerapp.databinding.AddNewPostLayoutBinding
 
 
-
 class AddNewPostFragment : Fragment() {
 
-    private lateinit var binding : AddNewPostLayoutBinding
+    private lateinit var binding: AddNewPostLayoutBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,3 +25,4 @@ class AddNewPostFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 }
+
