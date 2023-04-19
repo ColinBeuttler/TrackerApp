@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_hotspot"
+        android:id="@+id/nav_post_view"
         android:icon="@drawable/baseline_radar_24"
-        android:title="@string/hotspots" />
+        android:title="Post View" />
     <item
-        android:id="@+id/nav_spotting"
+        android:id="@+id/nav_map_view"
         android:icon="@drawable/baseline_location_on_24"
-        android:title="@string/catalog_sighting" />
+        android:title="Map View" />
     <item
-        android:id="@+id/nav_photos"
-        android:icon="@drawable/baseline_photo_camera_24"
-        android:title="@string/catalog_photo" />
+        android:id="@+id/nav_new_post"
+        android:icon="@drawable/baseline_add_circle_outline_24"
+        android:title="Add New Post" />
 
 </menu>

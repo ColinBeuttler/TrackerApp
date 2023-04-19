@@ -8,4 +8,16 @@
     <string name="starting_point">Starting Point</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trending_posts">Trending Posts</string>
+    <string name="location">Location:</string>
+    <string name="date">Date:</string>
+    <string name="description">Description:</string>
+    <string-array name="ufo_shape">
+        <item>Saucer</item>
+        <item>Cigar/Tic-Tac</item>
+        <item>Sphere</item>
+        <item>Cube</item>
+        <item>Diamond/Pyramid</item>
+        <item>Other</item>
+    </string-array>
 </resources>

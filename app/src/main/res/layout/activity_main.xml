@@ -7,7 +7,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/frame_content"
-        android:name="com.example.trackerapp.HotspotFragment"
+        android:name="com.example.trackerapp.PostViewFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/hot_spot_layout" />
+        tools:layout="@layout/trending_posts" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

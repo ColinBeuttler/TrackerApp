@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cartoon_alien"
+    android:scaleType="centerCrop">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <FrameLayout
+            android:id="@+id/frame_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/divider_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Add New Post"
+                android:textColor="@color/design_default_color_secondary_variant"
+                android:textSize="32sp" />
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/design_default_color_secondary_variant"
+            app:layout_constraintTop_toBottomOf="@id/frame_heading" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_view">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Use Google Maps Current Location"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/loaction_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/positive_google_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/negative_google_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="No" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:hint="Location (City, Country)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="#A9A9A9" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:hint="Date, mm/dd/yyyy">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_date_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date|datetime" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UFO Shape"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"/>
+            <RadioGroup
+                android:id="@+id/ufo_shape_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Saucer" />
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cigar/Tic-Tac" />
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sphere" />
+
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cube" />
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Diamond/Pyramid" />
+
+
+                    <RadioButton
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Other" />
+
+
+
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:hint="Description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/text_input_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
