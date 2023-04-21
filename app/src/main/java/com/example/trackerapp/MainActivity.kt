@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.commit
 import com.example.trackerapp.databinding.ActivityMainBinding
+import com.example.trackerapp.databinding.CardViewBlogPostLayoutBinding
 import com.google.android.material.navigation.NavigationBarView
 
 
@@ -25,8 +27,8 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding.bottomNav.setOnItemSelectedListener(this)
 
         onBackPressedDispatcher.addCallback(this) { showDialog() }
-
     }
+
 
     private fun showDialog() {
         AlertDialog.Builder(this)
