@@ -118,19 +118,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:text="UFO Shape"
-                android:textSize="20sp"
-                android:gravity="center_horizontal"/>
-            <RadioGroup
-                android:id="@+id/ufo_shape_radio_group"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:textSize="20sp" />
 
-                <GridLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:columnCount="3"
-                    android:layout_gravity="center_horizontal">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="3">
+
+                <RadioGroup
+                    android:id="@+id/ufo_shape_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <RadioButton
                         android:layout_width="100dp"
@@ -164,10 +165,9 @@
                         android:layout_height="wrap_content"
                         android:text="Other" />
 
+                </RadioGroup>
+
             </GridLayout>
-
-            </RadioGroup>
-
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
