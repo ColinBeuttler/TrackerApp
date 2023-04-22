@@ -175,8 +175,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Unspecified"
-                android:checked="true"/>
+                android:text="Unspecified"/>
 
         </RadioGroup>
 

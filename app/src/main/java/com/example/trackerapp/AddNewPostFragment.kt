@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.trackerapp.databinding.AddNewPostLayoutBinding
 
@@ -46,6 +47,7 @@ class AddNewPostFragment : Fragment() {
         else{
             Log.v(TAG, "Post Button activated")
             newPost = BlogPost(locationText, dateText, descriptionText)
+            Toast.makeText(activity, newPost.toString(), Toast.LENGTH_LONG).show()
         }
 
     }
