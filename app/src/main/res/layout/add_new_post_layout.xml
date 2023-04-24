@@ -8,6 +8,7 @@
     android:scaleType="centerCrop">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
@@ -43,144 +44,171 @@
             android:background="@color/design_default_color_secondary_variant"
             app:layout_constraintTop_toBottomOf="@id/frame_heading" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/goole_map_text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="20dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Use Google Maps Current Location"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider_view">
+            app:layout_constraintTop_toBottomOf="@id/divider_view" />
 
+        <RadioGroup
+            android:id="@+id/location_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/goole_map_text">
 
-            <TextView
+            <RadioButton
+                android:id="@+id/positive_google_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/negative_google_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="No"
+                android:checked="true"/>
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:errorEnabled="true"
+            android:id="@+id/text_input_layout_location"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="12dp"
+            android:hint="Location (City, Country)"
+            app:layout_constraintBottom_toTopOf="@id/text_input_layout_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_radio_group">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center_horizontal"
-                android:text="Use Google Maps Current Location"
-                android:textSize="20sp" />
+                android:inputType="textCapWords"
+                android:textColor="#A9A9A9" />
 
-            <RadioGroup
-                android:id="@+id/loaction_radio_group"
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_date"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="12dp"
+            android:hint="Date, mm/dd/yyyy"
+            app:layout_constraintBottom_toTopOf="@id/ufo_shape_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_date_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
+                android:inputType="date|datetime" />
 
-                <RadioButton
-                    android:id="@+id/positive_google_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Yes" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-                <RadioButton
-                    android:id="@+id/negative_google_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="No" />
-            </RadioGroup>
+        <TextView
+            android:id="@+id/ufo_shape_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="UFO Shape"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_date" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        <RadioGroup
+            android:id="@+id/ufo_shape_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ufo_shape_text">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saucer" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cigar/Tic-Tac" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sphere" />
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cube" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diamond/Pyramid" />
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unspecified"/>
+
+        </RadioGroup>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_layout_description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="12dp"
+            android:hint="Description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ufo_shape_radio_group">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="12dp"
-                android:hint="Location (City, Country)">
+                android:inputType="textLongMessage" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/text_input_location"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textCapWords"
-                    android:textColor="#A9A9A9" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="12dp"
-                android:hint="Date, mm/dd/yyyy">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/text_input_date_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="date|datetime" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="UFO Shape"
-                android:textSize="20sp"
-                android:gravity="center_horizontal"/>
-            <RadioGroup
-                android:id="@+id/ufo_shape_radio_group"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="Saucer" />
-
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="Cigar/Tic-Tac" />
-
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="Sphere" />
-
-
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="Cube" />
-
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="Diamond/Pyramid" />
-
-
-                    <RadioButton
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:text="Other" />
-
-
-
-            </RadioGroup>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="12dp"
-                android:hint="Description">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/text_input_phone_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textLongMessage" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/post_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Post"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_layout_description" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

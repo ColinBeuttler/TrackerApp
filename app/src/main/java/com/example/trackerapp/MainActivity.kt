@@ -25,15 +25,15 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding.bottomNav.setOnItemSelectedListener(this)
 
         onBackPressedDispatcher.addCallback(this) { showDialog() }
-
     }
+
 
     private fun showDialog() {
         AlertDialog.Builder(this)
             .setTitle("Warning!!")
             .setMessage("All unsaved data will be deleted, continue?")
             .setPositiveButton("Confirm") { _, _ -> finish() }
-            .setNegativeButton("Back") { dialog, _ -> dialog.dismiss()}
+            .setNegativeButton("Back") { dialog, _ -> dialog.dismiss() }
             .show()
     }
 
