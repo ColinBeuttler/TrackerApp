@@ -1,6 +1,8 @@
 package com.example.trackerapp
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,8 +37,13 @@ class PostViewFragment : Fragment() {
 
     }
 
+
+
     private fun loadBlogPosts() {
         val data = arguments?.getBundle("data")
+
+        Log.v(TAG, data.toString())
+
 
         if (data != null) {
             val newPost = Json.decodeFromString<BlogPost>(data.toString())
