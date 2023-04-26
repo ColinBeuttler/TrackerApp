@@ -8,6 +8,7 @@ import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.commit
 import com.example.trackerapp.databinding.ActivityMainBinding
+import com.example.trackerapp.databinding.TrendingPostsBinding
 import com.google.android.material.navigation.NavigationBarView
 
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
 
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding.bottomNav.setOnItemSelectedListener(this)
 
         onBackPressedDispatcher.addCallback(this) { showDialog() }
+
     }
 
 
