@@ -1,15 +1,15 @@
 package com.example.trackerapp
 
-import android.content.ContentValues.TAG
+
+import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.example.trackerapp.databinding.TrendingPostsBinding
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
+
 
 class PostViewFragment : Fragment() {
 
@@ -21,11 +21,12 @@ class PostViewFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View { 
         binding = TrendingPostsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -39,16 +40,8 @@ class PostViewFragment : Fragment() {
 
 
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     private fun loadBlogPosts() {
-        val data = arguments?.getBundle("data")
-
-        Log.v(TAG, data.toString())
-
-
-        if (data != null) {
-            val newPost = Json.decodeFromString<BlogPost>(data.toString())
-            blogPostList.add(newPost)
-        }
 
         blogPostList.add(
             BlogPost(

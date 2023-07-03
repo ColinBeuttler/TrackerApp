@@ -11,8 +11,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.example.trackerapp.databinding.AddNewPostLayoutBinding
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
+
 
 
 class AddNewPostFragment : Fragment()  {
@@ -53,8 +52,6 @@ class AddNewPostFragment : Fragment()  {
         else{
             Log.v(TAG, "Post Button activated")
             val newPost = BlogPost(locationText, dateText, descriptionText)
-            val dataString = Json.encodeToString(newPost)
-            bundle.putString("data", dataString)
             Toast.makeText(activity, newPost.toString(), Toast.LENGTH_LONG).show()
         }
 
